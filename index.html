@@ -1,0 +1,62 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Архиватор</title>
+    <link rel="stylesheet" type="text/css" href="src/css/style.css">
+    <link rel="stylesheet" type="text/css" href="src/css/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="src/js/script.js"></script>
+</head>
+<body>
+<section class="main">
+    <form method="POST" class = "upload_form" enctype="multipart/form-data">
+        <input type = "file" id = "uploaded_file" name = "uploaded_file" class = "upload_file">
+        <label for = "uploaded_file">Выберите файл...</label>
+        <div class = "buttons">
+            <div id = "enc_button" class = "button_block" onmousedown = "this.style.boxShadow=`2px 2px 10px rgba(0,0,0,0.5)`"
+                 onmouseup ="this.style.boxShadow=`5px 5px 10px rgba(0,0,0,0.5)`"
+                 onclick="zipRequest(document.getElementById('uploaded_file').files[0])">
+                <p>Заархивировать</p>
+            </div>
+            <div id = "dec_button" class = "button_block" onmousedown = "this.style.boxShadow=`2px 2px 10px rgba(0,0,0,0.5)`"
+                 onmouseup ="this.style.boxShadow=`5px 5px 10px rgba(0,0,0,0.5)`"
+                 onclick="unzipRequest(document.getElementById('uploaded_file').files[0])">
+                <p>Разархивировать</p>
+            </div>
+        </div>
+        <div id = "download"><a>↓ Скачать ↓</a></div>
+        <div id = "status"></div>
+    </form>
+</section>
+<footer>
+    <script>
+        $('#uploaded_file').on('change', () => {
+            let fileName = document.getElementById('uploaded_file').value.split('\\').pop();
+            if (fileName) {
+                document.getElementById('uploaded_file').nextElementSibling.innerHTML = `${fileName}`;
+                $('#enc_button').css({
+                    'display':'flex'
+                });
+                $('#dec_button').css({
+                    'display':'flex'
+                });
+            }
+        });
+        $(document).ready(function() {
+            if (window.innerWidth < window.innerHeight && window.innerWidth < 760) {
+                $('body').css({
+                    'height':`${innerHeight}`
+                })
+            }
+            $('.input_form').keypress((e) => {
+                if (e.keyCode == 13) {
+                    return false;
+                }
+            });
+        });
+    </script>
+</footer>
+</body>
+</html>

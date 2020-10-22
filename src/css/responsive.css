@@ -1,0 +1,36 @@
+@media screen and (max-width: 414px) {
+    .main .title {
+        font-size: 7vw;
+    }
+    .main .switcher {
+        width: 80%;
+        height: 8%;
+    }
+    .main .switcher .encr {
+        filter: none;
+        font-size: 5vw;
+        border: 1px solid black;
+    }
+    .main .switcher .decr {
+        filter: none;
+        font-size: 5vw;
+        border: 1px solid black;
+    }
+    .main .input_form {
+        font-size: 5vw;
+    }
+    .main textarea {
+        width: 80%;
+        height: 15%;
+    }
+    .main .buttons {
+        width: 60%;
+    }
+    .main .buttons .button_block {
+        width: 100%;
+        font-size: 5vw;
+    }
+    .main #status {
+        font-size: 5vw;
+    }
+}
