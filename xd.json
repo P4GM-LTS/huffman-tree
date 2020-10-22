@@ -1,0 +1,676 @@
+<ref *2> IncomingMessage {
+  _readableState: ReadableState {
+  objectMode: false,
+  highWaterMark: 16384,
+  buffer: BufferList { head: null, tail: null, length: 0 },
+length: 0,
+pipes: [],
+flowing: true,
+ended: true,
+endEmitted: true,
+reading: false,
+sync: false,
+needReadable: false,
+emittedReadable: false,
+readableListening: false,
+resumeScheduled: false,
+errorEmitted: false,
+emitClose: true,
+autoDestroy: false,
+destroyed: false,
+defaultEncoding: 'utf8',
+awaitDrainWriters: null,
+multiAwaitDrain: false,
+readingMore: false,
+decoder: null,
+encoding: null,
+[Symbol(kPaused)]: false
+},
+readable: false,
+_events: [Object: null prototype] {
+end: [Function: resetHeadersTimeoutOnReqEnd]
+},
+_eventsCount: 1,
+_maxListeners: undefined,
+socket: <ref *1> Socket {
+connecting: false,
+_hadError: false,
+_parent: null,
+_host: null,
+_readableState: ReadableState {
+objectMode: false,
+highWaterMark: 16384,
+buffer: BufferList { head: null, tail: null, length: 0 },
+length: 0,
+pipes: [],
+flowing: true,
+ended: false,
+endEmitted: false,
+reading: true,
+sync: false,
+needReadable: true,
+emittedReadable: false,
+readableListening: false,
+resumeScheduled: false,
+errorEmitted: false,
+emitClose: false,
+autoDestroy: false,
+destroyed: false,
+defaultEncoding: 'utf8',
+awaitDrainWriters: null,
+multiAwaitDrain: false,
+readingMore: false,
+decoder: null,
+encoding: null,
+[Symbol(kPaused)]: false
+},
+readable: true,
+_events: [Object: null prototype] {
+end: [Array],
+timeout: [Function: socketOnTimeout],
+data: [Function: bound socketOnData],
+error: [Array],
+close: [Array],
+drain: [Function: bound socketOnDrain],
+resume: [Function: onSocketResume],
+pause: [Function: onSocketPause]
+},
+_eventsCount: 8,
+_maxListeners: undefined,
+_writableState: WritableState {
+objectMode: false,
+highWaterMark: 16384,
+finalCalled: false,
+needDrain: false,
+ending: false,
+ended: false,
+finished: false,
+destroyed: false,
+decodeStrings: false,
+defaultEncoding: 'utf8',
+length: 0,
+writing: false,
+corked: 0,
+sync: true,
+bufferProcessing: false,
+onwrite: [Function: bound onwrite],
+writecb: null,
+writelen: 0,
+afterWriteTickInfo: null,
+bufferedRequest: null,
+lastBufferedRequest: null,
+pendingcb: 0,
+prefinished: false,
+errorEmitted: false,
+emitClose: false,
+autoDestroy: false,
+errored: false,
+bufferedRequestCount: 0,
+corkedRequestsFree: [Object]
+},
+writable: true,
+allowHalfOpen: true,
+_sockname: null,
+_pendingData: null,
+_pendingEncoding: '',
+server: Server {
+maxHeaderSize: undefined,
+_events: [Object: null prototype],
+_eventsCount: 4,
+_maxListeners: undefined,
+_connections: 1,
+_handle: [TCP],
+_usingWorkers: false,
+_workers: [],
+_unref: false,
+allowHalfOpen: true,
+pauseOnConnect: false,
+httpAllowHalfOpen: false,
+timeout: 0,
+keepAliveTimeout: 5000,
+maxHeadersCount: null,
+headersTimeout: 60000,
+_connectionKey: '6::::80',
+[Symbol(IncomingMessage)]: [Function: IncomingMessage],
+[Symbol(ServerResponse)]: [Function: ServerResponse],
+[Symbol(kCapture)]: false,
+[Symbol(asyncId)]: 4
+},
+_server: Server {
+maxHeaderSize: undefined,
+_events: [Object: null prototype],
+_eventsCount: 4,
+_maxListeners: undefined,
+_connections: 1,
+_handle: [TCP],
+_usingWorkers: false,
+_workers: [],
+_unref: false,
+allowHalfOpen: true,
+pauseOnConnect: false,
+httpAllowHalfOpen: false,
+timeout: 0,
+keepAliveTimeout: 5000,
+maxHeadersCount: null,
+headersTimeout: 60000,
+_connectionKey: '6::::80',
+[Symbol(IncomingMessage)]: [Function: IncomingMessage],
+[Symbol(ServerResponse)]: [Function: ServerResponse],
+[Symbol(kCapture)]: false,
+[Symbol(asyncId)]: 4
+},
+parser: HTTPParser {
+'0': [Function: parserOnHeaders],
+'1': [Function: parserOnHeadersComplete],
+'2': [Function: parserOnBody],
+'3': [Function: parserOnMessageComplete],
+'4': [Function: bound onParserExecute],
+_headers: [],
+_url: '',
+socket: [Circular *1],
+incoming: [Circular *2],
+outgoing: null,
+maxHeaderPairs: 2000,
+_consumed: true,
+onIncoming: [Function: bound parserOnIncoming],
+parsingHeadersStart: 1603024498748
+},
+on: [Function: socketListenerWrap],
+addListener: [Function: socketListenerWrap],
+prependListener: [Function: socketListenerWrap],
+_paused: false,
+_httpMessage: ServerResponse {
+_events: [Object: null prototype],
+_eventsCount: 2,
+_maxListeners: undefined,
+outputData: [],
+outputSize: 0,
+writable: true,
+_last: false,
+chunkedEncoding: false,
+shouldKeepAlive: true,
+useChunkedEncodingByDefault: true,
+sendDate: true,
+_removedConnection: false,
+_removedContLen: false,
+_removedTE: false,
+_contentLength: null,
+_hasBody: true,
+_trailer: '',
+finished: false,
+_headerSent: false,
+socket: [Circular *1],
+_header: null,
+_onPendingData: [Function: bound updateOutgoingData],
+_sent100: false,
+_expect_continue: false,
+req: [Circular *2],
+locals: [Object: null prototype] {},
+_startAt: undefined,
+_startTime: undefined,
+writeHead: [Function: writeHead],
+__onFinished: [Function],
+[Symbol(kCapture)]: false,
+[Symbol(kNeedDrain)]: false,
+[Symbol(corked)]: 0,
+[Symbol(kOutHeaders)]: [Object: null prototype]
+},
+_peername: { address: '::ffff:192.168.1.166', family: 'IPv6', port: 51906 },
+[Symbol(asyncId)]: 6,
+[Symbol(kHandle)]: TCP {
+reading: true,
+onconnection: null,
+_consumed: true,
+[Symbol(owner)]: [Circular *1]
+},
+[Symbol(lastWriteQueueSize)]: 0,
+[Symbol(timeout)]: null,
+[Symbol(kBuffer)]: null,
+[Symbol(kBufferCb)]: null,
+[Symbol(kBufferGen)]: null,
+[Symbol(kCapture)]: false,
+[Symbol(kBytesRead)]: 0,
+[Symbol(kBytesWritten)]: 0
+},
+httpVersionMajor: 1,
+httpVersionMinor: 1,
+httpVersion: '1.1',
+complete: true,
+headers: {
+host: '192.168.1.128',
+connection: 'keep-alive',
+'content-length': '3568',
+'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36',
+'content-type': 'application/x-www-form-urlencoded',
+accept: '*/*',
+origin: 'http://localhost:63342',
+referer: 'http://localhost:63342/',
+'accept-encoding': 'gzip, deflate',
+'accept-language': 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+},
+rawHeaders: [
+'Host',
+'192.168.1.128',
+'Connection',
+'keep-alive',
+'Content-Length',
+'3568',
+'User-Agent',
+'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36',
+'Content-type',
+'application/x-www-form-urlencoded',
+'Accept',
+'*/*',
+'Origin',
+'http://localhost:63342',
+'Referer',
+'http://localhost:63342/',
+'Accept-Encoding',
+'gzip, deflate',
+'Accept-Language',
+'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+],
+trailers: {},
+rawTrailers: [],
+aborted: false,
+upgrade: false,
+url: '/fileDown',
+method: 'POST',
+statusCode: null,
+statusMessage: null,
+client: <ref *1> Socket {
+connecting: false,
+_hadError: false,
+_parent: null,
+_host: null,
+_readableState: ReadableState {
+objectMode: false,
+highWaterMark: 16384,
+buffer: BufferList { head: null, tail: null, length: 0 },
+length: 0,
+pipes: [],
+flowing: true,
+ended: false,
+endEmitted: false,
+reading: true,
+sync: false,
+needReadable: true,
+emittedReadable: false,
+readableListening: false,
+resumeScheduled: false,
+errorEmitted: false,
+emitClose: false,
+autoDestroy: false,
+destroyed: false,
+defaultEncoding: 'utf8',
+awaitDrainWriters: null,
+multiAwaitDrain: false,
+readingMore: false,
+decoder: null,
+encoding: null,
+[Symbol(kPaused)]: false
+},
+readable: true,
+_events: [Object: null prototype] {
+end: [Array],
+timeout: [Function: socketOnTimeout],
+data: [Function: bound socketOnData],
+error: [Array],
+close: [Array],
+drain: [Function: bound socketOnDrain],
+resume: [Function: onSocketResume],
+pause: [Function: onSocketPause]
+},
+_eventsCount: 8,
+_maxListeners: undefined,
+_writableState: WritableState {
+objectMode: false,
+highWaterMark: 16384,
+finalCalled: false,
+needDrain: false,
+ending: false,
+ended: false,
+finished: false,
+destroyed: false,
+decodeStrings: false,
+defaultEncoding: 'utf8',
+length: 0,
+writing: false,
+corked: 0,
+sync: true,
+bufferProcessing: false,
+onwrite: [Function: bound onwrite],
+writecb: null,
+writelen: 0,
+afterWriteTickInfo: null,
+bufferedRequest: null,
+lastBufferedRequest: null,
+pendingcb: 0,
+prefinished: false,
+errorEmitted: false,
+emitClose: false,
+autoDestroy: false,
+errored: false,
+bufferedRequestCount: 0,
+corkedRequestsFree: [Object]
+},
+writable: true,
+allowHalfOpen: true,
+_sockname: null,
+_pendingData: null,
+_pendingEncoding: '',
+server: Server {
+maxHeaderSize: undefined,
+_events: [Object: null prototype],
+_eventsCount: 4,
+_maxListeners: undefined,
+_connections: 1,
+_handle: [TCP],
+_usingWorkers: false,
+_workers: [],
+_unref: false,
+allowHalfOpen: true,
+pauseOnConnect: false,
+httpAllowHalfOpen: false,
+timeout: 0,
+keepAliveTimeout: 5000,
+maxHeadersCount: null,
+headersTimeout: 60000,
+_connectionKey: '6::::80',
+[Symbol(IncomingMessage)]: [Function: IncomingMessage],
+[Symbol(ServerResponse)]: [Function: ServerResponse],
+[Symbol(kCapture)]: false,
+[Symbol(asyncId)]: 4
+},
+_server: Server {
+maxHeaderSize: undefined,
+_events: [Object: null prototype],
+_eventsCount: 4,
+_maxListeners: undefined,
+_connections: 1,
+_handle: [TCP],
+_usingWorkers: false,
+_workers: [],
+_unref: false,
+allowHalfOpen: true,
+pauseOnConnect: false,
+httpAllowHalfOpen: false,
+timeout: 0,
+keepAliveTimeout: 5000,
+maxHeadersCount: null,
+headersTimeout: 60000,
+_connectionKey: '6::::80',
+[Symbol(IncomingMessage)]: [Function: IncomingMessage],
+[Symbol(ServerResponse)]: [Function: ServerResponse],
+[Symbol(kCapture)]: false,
+[Symbol(asyncId)]: 4
+},
+parser: HTTPParser {
+'0': [Function: parserOnHeaders],
+'1': [Function: parserOnHeadersComplete],
+'2': [Function: parserOnBody],
+'3': [Function: parserOnMessageComplete],
+'4': [Function: bound onParserExecute],
+_headers: [],
+_url: '',
+socket: [Circular *1],
+incoming: [Circular *2],
+outgoing: null,
+maxHeaderPairs: 2000,
+_consumed: true,
+onIncoming: [Function: bound parserOnIncoming],
+parsingHeadersStart: 1603024498748
+},
+on: [Function: socketListenerWrap],
+addListener: [Function: socketListenerWrap],
+prependListener: [Function: socketListenerWrap],
+_paused: false,
+_httpMessage: ServerResponse {
+_events: [Object: null prototype],
+_eventsCount: 2,
+_maxListeners: undefined,
+outputData: [],
+outputSize: 0,
+writable: true,
+_last: false,
+chunkedEncoding: false,
+shouldKeepAlive: true,
+useChunkedEncodingByDefault: true,
+sendDate: true,
+_removedConnection: false,
+_removedContLen: false,
+_removedTE: false,
+_contentLength: null,
+_hasBody: true,
+_trailer: '',
+finished: false,
+_headerSent: false,
+socket: [Circular *1],
+_header: null,
+_onPendingData: [Function: bound updateOutgoingData],
+_sent100: false,
+_expect_continue: false,
+req: [Circular *2],
+locals: [Object: null prototype] {},
+_startAt: undefined,
+_startTime: undefined,
+writeHead: [Function: writeHead],
+__onFinished: [Function],
+[Symbol(kCapture)]: false,
+[Symbol(kNeedDrain)]: false,
+[Symbol(corked)]: 0,
+[Symbol(kOutHeaders)]: [Object: null prototype]
+},
+_peername: { address: '::ffff:192.168.1.166', family: 'IPv6', port: 51906 },
+[Symbol(asyncId)]: 6,
+[Symbol(kHandle)]: TCP {
+reading: true,
+onconnection: null,
+_consumed: true,
+[Symbol(owner)]: [Circular *1]
+},
+[Symbol(lastWriteQueueSize)]: 0,
+[Symbol(timeout)]: null,
+[Symbol(kBuffer)]: null,
+[Symbol(kBufferCb)]: null,
+[Symbol(kBufferGen)]: null,
+[Symbol(kCapture)]: false,
+[Symbol(kBytesRead)]: 0,
+[Symbol(kBytesWritten)]: 0
+},
+_consuming: true,
+_dumped: false,
+next: [Function: next],
+baseUrl: '',
+originalUrl: '/fileDown',
+_parsedUrl: Url {
+protocol: null,
+slashes: null,
+auth: null,
+host: null,
+port: null,
+hostname: null,
+hash: null,
+search: null,
+query: null,
+pathname: '/fileDown',
+path: '/fileDown',
+href: '/fileDown',
+_raw: '/fileDown'
+},
+params: {},
+query: {},
+res: <ref *3> ServerResponse {
+_events: [Object: null prototype] {
+finish: [Array],
+end: [Function: onevent]
+},
+_eventsCount: 2,
+_maxListeners: undefined,
+outputData: [],
+outputSize: 0,
+writable: true,
+_last: false,
+chunkedEncoding: false,
+shouldKeepAlive: true,
+useChunkedEncodingByDefault: true,
+sendDate: true,
+_removedConnection: false,
+_removedContLen: false,
+_removedTE: false,
+_contentLength: null,
+_hasBody: true,
+_trailer: '',
+finished: false,
+_headerSent: false,
+socket: <ref *1> Socket {
+connecting: false,
+_hadError: false,
+_parent: null,
+_host: null,
+_readableState: [ReadableState],
+readable: true,
+_events: [Object: null prototype],
+_eventsCount: 8,
+_maxListeners: undefined,
+_writableState: [WritableState],
+writable: true,
+allowHalfOpen: true,
+_sockname: null,
+_pendingData: null,
+_pendingEncoding: '',
+server: [Server],
+_server: [Server],
+parser: [HTTPParser],
+on: [Function: socketListenerWrap],
+addListener: [Function: socketListenerWrap],
+prependListener: [Function: socketListenerWrap],
+_paused: false,
+_httpMessage: [Circular *3],
+_peername: [Object],
+[Symbol(asyncId)]: 6,
+[Symbol(kHandle)]: [TCP],
+[Symbol(lastWriteQueueSize)]: 0,
+[Symbol(timeout)]: null,
+[Symbol(kBuffer)]: null,
+[Symbol(kBufferCb)]: null,
+[Symbol(kBufferGen)]: null,
+[Symbol(kCapture)]: false,
+[Symbol(kBytesRead)]: 0,
+[Symbol(kBytesWritten)]: 0
+},
+_header: null,
+_onPendingData: [Function: bound updateOutgoingData],
+_sent100: false,
+_expect_continue: false,
+req: [Circular *2],
+locals: [Object: null prototype] {},
+_startAt: undefined,
+_startTime: undefined,
+writeHead: [Function: writeHead],
+__onFinished: [Function: listener] { queue: [Array] },
+[Symbol(kCapture)]: false,
+[Symbol(kNeedDrain)]: false,
+[Symbol(corked)]: 0,
+[Symbol(kOutHeaders)]: [Object: null prototype] {
+'x-powered-by': [Array],
+'access-control-allow-origin': [Array],
+'access-control-allow-headers': [Array]
+}
+},
+_startAt: [ 163556, 243595299 ],
+_startTime: 2020-10-18T12:34:58.752Z,
+_remoteAddress: '::ffff:192.168.1.166',
+body: [Object: null prototype] {
+`{\\rtf1\\ansi\\deff0{\\fonttbl{\\f0\\fnil\\fcharset0 Courier New;}{\\f1\\fnil\\fcharset204{\\*\\fname Courier New;}Courier New CYR;}}\r\n{\\colortbl ;\\red255\\green0\\blue0;}\r\n{\\*\\generator Msftedit 5.41.21.2510;}\\viewkind4\\uc1\\pard\\lang1033\\f0\\fs22 #include "sk_gen.h"\\par\r\n\\par\r\n#include "randombytes.h"\\par\r\n#include "controlbits.h"\\par\r\n#include "params.h"\\par\r\n#include "util.h"\\par\r\n#include "gf.h"\\par\r\n\\par\r\n#include <stdint.h>\\par\r\n#include <stdio.h>\\par\r\n#include <stdlib.h>\\par\r\n\\par\r\nstatic int irr_gen(gf *out, gf *f)\\lang1049\\f1  \\lang1033\\f0 //\\cf1\\lang1049\\f1\\'cf\\'ee \\'e2\\'e8\\'e4\\'e8\\'ec\\'ee\\'ec\\'f3 \\'fd\\'f2\\'ee \\'ef\\'f0\\'ee\\'f6\\'e5\\'e4\\'f3\\'f0\\'e0 \\'ef\\'f0\\'ee\\'e2\\'e5\\'f0\\'ea\\'e8 \\'ed\\'e5\\'ef\\'f0\\'e8\\'e2\\'ee\\'e4\\'e8\\'ec\\'ee\\'e3\\'ee \\'ec\\'ed\\'ee\\'e3\\'ee\\'f7\\'eb\\'e5\\'ed\\'e0...\\lang1033\\f0\\par\r\n\\cf0\\{\\par\r\n\\tab int i, j, k, c;\\par\r\n\\par\r\n\\tab gf mat[ SYS_T 1 ][ SYS_T ];\\par\r\n\\tab gf mask, inv, t;\\par\r\n\\par\r\n\\tab //\\par\r\n\\par\r\n\\tab mat[0][0] `: ' 1;\\par\r\n' +
+'\\par\r\n' +
+'\\tab for (i = 1; i < SYS_T; i  )\\par\r\n' +
+'\\tab\\tab mat[0][i] = 0;\\par\r\n' +
+'\\par\r\n' +
+'\\tab for (i = 0; i < SYS_T; i  )\\par\r\n' +
+'\\tab\\tab mat[1][i] = f[i];\\par\r\n' +
+'\\par\r\n' +
+'\\tab for (j = 2; j <= SYS_T; j  )\\par\r\n' +
+'\\tab\\tab GF_mul(mat[j], mat[j-1], f);\\par\r\n' +
+'\\par\r\n' +
+'\\tab //\\par\r\n' +
+'\\par\r\n' +
+'\\tab for (j = 0; j < SYS_T; j  )\\par\r\n' +
+'\\tab\\{\\par\r\n' +
+'\\tab\\tab for (k = j   1; k < SYS_T; k  )\\par\r\n' +
+'\\tab\\tab\\{\\par\r\n' +
+'\\tab\\tab\\tab mask = gf_iszero(mat[ j ][ j ]);\\par\r\n' +
+'\\par\r\n' +
+'\\tab\\tab\\tab for (c = j; c < SYS_T   1; c  )\\par\r\n' +
+'\\tab\\tab\\tab\\tab mat[ c ][ j ] ^= mat[ c ][ k ] ',
+' mask;\\par\r\n\\par\r\n\\tab\\tab\\}\\par\r\n\\par\r\n\\tab\\tab if ( mat[ j ][ j ] ': '= 0 ) // return if not systematic\\par\r\n' +
+'\\tab\\tab\\{\\par\r\n' +
+'\\tab\\tab\\tab return -1;\\par\r\n' +
+'\\tab\\tab\\}\\par\r\n' +
+'\\par\r\n' +
+'\\tab\\tab inv = gf_inv(mat[j][j]);\\par\r\n' +
+'\\par\r\n' +
+'\\tab\\tab for (c = j; c < SYS_T   1; c  )\\par\r\n' +
+'\\tab\\tab\\tab mat[ c ][ j ] = gf_mul(mat[ c ][ j ], inv) ;\\par\r\n' +
+'\\par\r\n' +
+'\\tab\\tab for (k = 0; k < SYS_T; k  )\\par\r\n' +
+'\\tab\\tab\\{\\par\r\n' +
+'\\tab\\tab\\tab if (k != j)\\par\r\n' +
+'\\tab\\tab\\tab\\{\\par\r\n' +
+'\\tab\\tab\\tab\\tab t = mat[ j ][ k ];\\par\r\n' +
+'\\par\r\n' +
+'\\tab\\tab\\tab\\tab for (c = j; c < SYS_T   1; c  )\\par\r\n' +
+'\\tab\\tab\\tab\\tab\\tab mat[ c ][ k ] ^= gf_mul(mat[ c ][ j ], t);\\par\r\n' +
+'\\tab\\tab\\tab\\}\\par\r\n' +
+'\\tab\\tab\\}\\par\r\n' +
+'\\tab\\}\\par\r\n' +
+'\\par\r\n' +
+'\\tab for (i = 0; i < SYS_T; i  )\\par\r\n' +
+'\\tab\\tab out[i] = mat[ SYS_T ][ i ];\\par\r\n' +
+'\\par\r\n' +
+'\\tab return 0;\\par\r\n' +
+'\\}\\par\r\n' +
+'\\par\r\n' +
+"int sk_gen(unsigned char *sk)\\lang1049\\f1   \\cf1\\'dd\\'f2\\'ee \\'ef\\'ee \\'e2\\'e8\\'e4\\'e8\\'ec\\'ee\\'ec\\'f3 \\'f1\\'ee\\'e1\\'f1\\'f2\\'e2\\'e5\\'ed\\'ed\\'ee \\'ef\\'f0\\'ee\\'f6\\'e5\\'e4\\'f3\\'f0\\'e0 \\'e3\\'e5\\'ed\\'e5\\'f0\\'e0\\'f6\\'e8\\'e8 \\'f1\\'eb\\'f3\\'f7\\'e0\\'e9\\'ed\\'ee\\'e3\\'ee \\'ec\\'ed\\'ee\\'e3\\'ee\\'f7\\'eb\\'e5\\'ed\\'e0 \\'e7\\'e0\\'e4\\'e0\\'ed\\'ed\\'ee\\'e9 \\'f1\\'f2\\'e5\\'ef\\'e5\\'ed\\'e8. \\'cf\\'f0\\'e8 \\'fd\\'f2\\'ee\\'ec \\'ec\\'ed\\'ee\\'e3\\'ee\\'f7\\'eb\\'e5\\'ed \\'f1 \\'ef\\'ee\\'ec\\'ee\\'f9\\'fc\\'fe \\'ef\\'ee\\'f6\\'e5\\'e4\\'f3\\'f0\\'fb \\lang1033\\f0 int irr_gen(gf *out, gf *f)\\lang1049\\f1  \\'ef\\'f0\\'ee\\'e2\\'e5\\'f0\\'ff\\'e5\\'f2\\'f1\\'ff \\'ed\\'e0 \\'ed\\'e5\\'ef\\'f0\\'e8\\'e2\\'ee\\'e4\\'e8\\'ec\\'ee\\'f1\\'f2\\'fc..\\cf0\\lang1033\\f0\\par\r\n" +
+'\\{\\par\r\n' +
+'\\tab int i;\\par\r\n' +
+'\\par\r\n' +
+'\\tab gf g[ SYS_T ]; // irreducible polynomial\\par\r\n' +
+'\\tab gf a[ SYS_T ]; // random element in GF(2^mt)\\par\r\n' +
+'\\tab\\par\r\n' +
+'\\tab while (1)\\par\r\n' +
+'\\tab\\{\\par\r\n' +
+'\\tab\\tab randombytes((unsigned char *) a, sizeof(a)); \\par\r\n' +
+'\\par\r\n' +
+'\\tab\\tab for (i = 0; i < SYS_T; i  ) a[i] ',
+'': ' GFMASK;\\par\r\n' +
+'\\par\r\n' +
+'\\tab\\tab if ( irr_gen(g, a) == 0 ) break;\\par\r\n' +
+'\\tab\\}\\par\r\n' +
+'\\par\r\n' +
+'\\tab for (i = 0; i < SYS_T; i  ) \\par\r\n' +
+'\\tab\\tab store2( sk   SYS_N/8   i*2, g[i] );\\par\r\n' +
+'\\par\r\n' +
+'\\tab randombytes(sk, SYS_N/8);\\par\r\n' +
+'\\par\r\n' +
+'\\tab controlbits(sk   SYS_N/8   IRR_BYTES);\\par\r\n' +
+'\\par\r\n' +
+'\\tab return 0;\\par\r\n' +
+'\\}\\par\r\n' +
+'\\par\r\n' +
+'\\par\r\n' +
+'}\r\n' +
+'\u0000'
+},
+_body: true,
+length: undefined,
+secret: undefined,
+cookies: [Object: null prototype] {},
+signedCookies: [Object: null prototype] {},
+route: Route {
+path: '/fileDown',
+stack: [ [Layer], [Layer] ],
+methods: { post: true }
+},
+[Symbol(kCapture)]: false
+}
