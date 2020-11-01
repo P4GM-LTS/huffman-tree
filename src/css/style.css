@@ -92,6 +92,7 @@ body {
     align-items: center;
     height: 5%;
     width: 30%;
+    margin-bottom: 1%;
 }
 
 .main .upload_form .buttons .button_block {
@@ -136,6 +137,7 @@ body {
 
 a:link {
     color: rgb(255, 255, 255);
+    text-decoration: none;
 }
 a:visited {
     color: rgb(255, 255, 255);
