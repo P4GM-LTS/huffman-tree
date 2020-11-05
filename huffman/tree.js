@@ -5,25 +5,24 @@
         this.huffCode = '';
         this.depth = childDepth+1;
     };
-
     var sortNodes = function(arr){
         return arr.sort((a, b)=>{
-            return(a.weight - b.weight);
+            return(b.weight - a.weight);
         });
     };
     module.exports.firstNodes = function(text, arrayOfActiveNodes=[]){
-        arrayOfActiveNodes.push(new nodeElement(text[0], 1));
-        for(let i=1; i<text.length; i++){
+        arrayOfActiveNodes.push(new nodeElement(text[0] + text[1], 1));
+        for(let i=2; i<text.length; i += 2){
             var inc = 0;
             for(let j=0; j<arrayOfActiveNodes.length; j++){
-                if(arrayOfActiveNodes[j].nodeName === text[i]){
+                if(arrayOfActiveNodes[j].nodeName === text[i]+text[i+1]){
                     arrayOfActiveNodes[j].weight += 1;
                     break;
                 }
                 else{
                     inc++;
                     if(inc === arrayOfActiveNodes.length){
-                        arrayOfActiveNodes[arrayOfActiveNodes.length] = new nodeElement(text[i]);
+                        arrayOfActiveNodes[arrayOfActiveNodes.length] = new nodeElement(text[i]+text[i+1]);
                     }
                 }
             }
@@ -47,39 +46,33 @@
         return arrayOfActiveNodes;
     };
     module.exports.arrayBackwards = function(finalElement){
-        var i = 0;
-        while(1){
-            finalElement.map((curr, idx, arr) => {
-                if (curr.childs) {
-                    curr.childs[0].huffCode = `${curr.huffCode}${curr.childs[0].huffCode}`;
-                    curr.childs[1].huffCode = `${curr.huffCode}${curr.childs[1].huffCode}`;
-                    console.log(curr);
-                    arr.push(curr.childs);
-                    arr.splice(idx, 1);
-                    return arr;
+        return finalElement.reduce(
+            (a, v) => {
+                if (Array.isArray(v.childs)){
+                    v.childs[0].huffCode = `${v.huffCode}${v.childs[0].huffCode}`;
+                    v.childs[1].huffCode = `${v.huffCode}${v.childs[1].huffCode}`;
+                    return a.concat(module.exports.arrayBackwards(v.childs))
                 }
                 else{
-                    return curr;
+                    return a.concat(v)
                 }
-                if(finalElement.filter(el => el.depth > 1)) {
-                    i = 0;
-                } else {
-                    i = 1;
-                }
-            });
-           if (i == 1) break;
-        }
-
+            }, [])
     };
     module.exports.textReplaceByNodes = function (text, arr) {
         text = text.split('');
-        for(let i=0; i<text.length; i++){
+        for(let i=0; i<text.length; i += 2){
             for(let j=0; j<arr.length; j++){
-                if(arr[j].nodeName === text[i]) {
+                if(arr[j].nodeName === text[i]+text[i+1]) {
                     text[i] = arr[j].huffCode;
                 }
             }
         }
+        text = text.filter((e,i)=>!(i%2));
         return text.join('');
     };
 
+    module.exports.textPrepare = function(text){
+        return Buffer.from((text + ('0'.repeat(8 - text.length%8))).match(/.{1,8}/g).map((v, i, a) => {
+            return a[i] = '0x' + Number.parseInt(v, 2).toString(16);
+        }))
+    };
